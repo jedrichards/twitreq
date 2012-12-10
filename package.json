@@ -1,0 +1,37 @@
+{
+    "name": "twitreq",
+    "version": "0.0.1",
+    "description": "Generates request options objects suitable for making authenticated requests to Twitter's OAuth 1.1 API via Node's native HTTPS library. ",
+    "main": "lib/twitreq",
+    "scripts": {
+        "test": "grunt test"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/jedrichards/twitreq.git"
+    },
+    "dependencies": {
+        "node-uuid": "~1.4.0",
+        "parambulator": "~0.1.1"
+    },
+    "keywords": [
+        "twitter",
+        "oauth",
+        "authentication",
+        "authorization",
+        "headers",
+        "request",
+        "signed",
+        "requests",
+        "https",
+        "http"
+    ],
+    "author": {
+        "name": "Jed Richards",
+        "email": "jed@seisaku.co.uk"
+    },
+    "license": "MIT",
+        "engines": {
+        "node": ">=0.8.15"
+    }
+}
