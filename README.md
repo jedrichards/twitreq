@@ -97,6 +97,25 @@ twitreq(options,function (err,reqOptions) {
 });
 ```
 
+The above code should produce a `reqOptions` object that looks something like this:
+
+```javascript
+{
+    method: 'GET',
+    path: '/1.1/statuses/user_timeline.json?screen_name=jedrichards&count=1&exclude_replies=true',
+    hostname: 'api.twitter.com',
+    headers:
+    {
+        Authorization: 'OAuth oauth_consumer_key="-", oauth_nonce="NjIyM2Q0OGYtMzc2NC00ZDliLTliM2EtNWJiYzM3N2MxNmI3", oauth_signature="-", oauth_signature_method="HMAC-SHA1", oauth_timestamp="1355169071", oauth_token="-", oauth_version="1.0"',
+        Accept: '*/*',
+        Connection: 'close',
+        'User-Agent': 'Node.JS twitreq v0.0.1',
+        'Content-Type': 'application/x-www-form-urlencoded',
+        Host: 'api.twitter.com'
+    }
+}
+```
+
 ### Limitations
 
 This is a new library, so please bear in mind the following:
