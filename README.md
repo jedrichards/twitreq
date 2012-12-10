@@ -2,7 +2,7 @@
 
 Generates a request `options` object suitable for making signed and authenticated requests to the v1.1 Twitter OAuth REST API using the native Node `https` library.
 
-A lot of oAuth libraries try and do too many things at once: signing requests, wrapping the request/response functionality as well as providing a non-standard programmatic interface to the returned streamed data. This can make it hard to debug when your oAuth request (inevitably) fails the first few times.
+A lot of oAuth libraries try and do too many things at once: signing requests, wrapping the request/response functionality as well as providing a non-standard programmatic interface to the returned streamed data. This can make it hard to debug when your OAuth request (inevitably) fails the first few times.
 
 This module concentrates on one thing only: generating the `options` object you need when writing native Node code like this:
 
@@ -49,6 +49,7 @@ The `twitreq` function accepts an `options` object literal with the following sc
     oAuthVersion,               // Optional string, defaults to "1.0"
     oAuthSignatureMethod,       // Optional string, defaults to "HMAC-SHA1"
     queryParams                 // Optional object literal for query parameters, e.g. {screen_name:"jedrichards"}
+    verbose                     // Optional boolean, prints out verbose debug info to console.log
 }
 ```
 
@@ -93,7 +94,7 @@ twitreq(options,function (err,reqOptions) {
         })
         req.end();
     }
-})
+});
 ```
 
 ### Limitations
@@ -101,5 +102,6 @@ twitreq(options,function (err,reqOptions) {
 This is a new library, so please bear in mind the following:
 
 - Requests with `POST` body data currently not supported. Coming soon.
+- Related to the point above, only tested with read-only GET requests.
 - Untested with streaming API calls, although may well work fine.
 - Only tested with requests authenticated as the app's Twitter user (i.e. the user associated with the app on https://dev.twitter.com), although may well work fine in other scenarios.

@@ -1,7 +1,7 @@
 {
     "name": "twitreq",
     "version": "0.0.1",
-    "description": "Generates request options objects suitable for making authenticated requests to Twitter's OAuth 1.1 API via Node's native HTTPS library. ",
+    "description": "Generates a request `options` object suitable for making signed and authenticated requests to the v1.1 Twitter OAuth REST API using the native Node `https` library.",
     "main": "lib/twitreq",
     "scripts": {
         "test": "grunt test"
